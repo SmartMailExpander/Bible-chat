@@ -1,0 +1,161 @@
+/*
+Figma-style layout guide:
+- Font: 'Lora', Georgia, serif
+- Title: 2.1rem, #6b5c4a, bold
+- Subtitle: 1.1rem, #b0a597
+- Card bg: #f7f4ef, border-radius: 24px, box-shadow: 0 8px 32px 0 rgba(158,145,136,0.10)
+- Progress bar: #e5dcd3 (bg), #b0a597 (fill)
+- Verse: 1.2rem italic, #6b5c4a
+- Reflection: 1.08rem, #6b5c4a
+- Prompt: 1.08rem, #b0a597
+- Button: #e5dcd3 bg, #6b5c4a text, border-radius: 14px, font-size: 1.08rem, box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08)
+- Button hover: #ded0c4
+- Bookmark: #b0a597
+*/
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f4ef 0%, #efe9e1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 32px 0;
+}
+.title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 2.1rem;
+  color: #6b5c4a;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.subtitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.1rem;
+  color: #b0a597;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.progressBarBg {
+  width: 90vw;
+  max-width: 370px;
+  height: 8px;
+  background: #e5dcd3;
+  border-radius: 6px;
+  margin: 0 auto 24px auto;
+  overflow: hidden;
+}
+.progressBar {
+  height: 8px;
+  background: #b0a597;
+  border-radius: 6px;
+  transition: width 0.5s;
+}
+.card {
+  background: #f7f4ef;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(158,145,136,0.10);
+  padding: 32px 24px 24px 24px;
+  max-width: 390px;
+  margin: 0 auto 24px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.verse {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.2rem;
+  color: #6b5c4a;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.reference {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  color: #b0a597;
+  margin-bottom: 18px;
+}
+.reflection {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.08rem;
+  color: #6b5c4a;
+  margin-bottom: 18px;
+}
+.prompt {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.08rem;
+  color: #b0a597;
+  margin-bottom: 24px;
+}
+.button {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 14px;
+  background: #e5dcd3;
+  color: #6b5c4a;
+  font-size: 1.08rem;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  border: none;
+  margin-bottom: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.button:active, .button:focus, .button:hover {
+  background: #ded0c4;
+  color: #6b5c4a;
+}
+.bookmark {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #b0a597;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.bookmarkActive {
+  color: #6b5c4a;
+}
+.completedBadge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #e5dcd3;
+  color: #6b5c4a;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 1rem;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  box-shadow: 0 1px 4px 0 rgba(158,145,136,0.08);
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(239,233,225,0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  background: #f7f4ef;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(158,145,136,0.10);
+  padding: 32px 24px;
+  max-width: 340px;
+  width: 90vw;
+  font-family: 'Lora', Georgia, serif;
+  color: #6b5c4a;
+  font-size: 1.08rem;
+  text-align: center;
+} 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reading - Haven Bible App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: #f7f4ef;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px 0 rgba(158,145,136,0.1);
+        }
+
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            background: #e5dcd3;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #6b5c4a;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #6b5c4a;
+        }
+
+        .version-selector {
+            background: #e5dcd3;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #6b5c4a;
+            font-family: 'Lora', Georgia, serif;
+        }
+
+        .content {
+            padding: 40px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+        }
+
+        .verse-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px 0 rgba(158,145,136,0.1);
+        }
+
+        .verse-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #6b5c4a;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .verse-reference {
+            font-size: 1rem;
+            color: #b0a597;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .verse-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-btn {
+            background: #e5dcd3;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: #6b5c4a;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background: #b0a597;
+            color: white;
+        }
+
+        .status-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: #6b5c4a;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(107, 92, 74, 0.1);
+            color: #6b5c4a;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="header">
+        <button class="back-btn">←</button>
+        <div class="page-title">Read Bible</div>
+        <select class="version-selector">
+            <option>ESV</option>
+            <option>KJV</option>
+            <option>NIV</option>
+        </select>
+    </div>
+
+    <div class="content">
+        <div class="verse-card">
+            <div class="verse-text">
+                "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
+            </div>
+            <div class="verse-reference">Jeremiah 29:11</div>
+            <div class="verse-actions">
+                <button class="action-btn">🔖 Bookmark</button>
+                <button class="action-btn">🖍️ Highlight</button>
+                <button class="action-btn">📝 Note</button>
+                <button class="action-btn">💬 Explain</button>
+            </div>
+        </div>
+
+        <div class="verse-card">
+            <div class="verse-text">
+                "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."
+            </div>
+            <div class="verse-reference">Proverbs 3:5-6</div>
+            <div class="verse-actions">
+                <button class="action-btn">🔖 Bookmark</button>
+                <button class="action-btn">🖍️ Highlight</button>
+                <button class="action-btn">📝 Note</button>
+                <button class="action-btn">💬 Explain</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="watermark">
+        Haven Bible App - Bible Reading - Desktop
+    </div>
+</body>
+</html>

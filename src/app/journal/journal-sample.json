@@ -1,0 +1,26 @@
+[
+  {
+    "id": "entry_001",
+    "title": "Reflections on Today’s Verse",
+    "body": "I spent some time thinking about the verse from this morning’s devotional. It has given me a sense of peace and direction.",
+    "date": "2024-04-24T08:00:00Z",
+    "verse": "Jeremiah 29:11",
+    "userId": "user_abc123"
+  },
+  {
+    "id": "entry_002",
+    "title": "Trust in the Lord",
+    "body": "Today I was reminded to place my trust in the Lord’s plan and His timing, even when things are uncertain.",
+    "date": "2024-04-22T09:30:00Z",
+    "verse": "",
+    "userId": "user_abc123"
+  },
+  {
+    "id": "entry_003",
+    "title": "A Grateful Heart",
+    "body": "This morning, I reflected on all the blessings in my life. I am filled with a deep sense of gratitude.",
+    "date": "2024-04-20T07:45:00Z",
+    "verse": "",
+    "userId": "user_abc123"
+  }
+] 

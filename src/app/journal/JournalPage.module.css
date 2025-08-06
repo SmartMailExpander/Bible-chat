@@ -1,0 +1,233 @@
+/*
+Figma-style layout guide:
+- Font: 'Lora', Georgia, serif
+- Title: 2.1rem, #6b5c4a, bold
+- Card bg: #f7f4ef, border-radius: 24px, box-shadow: 0 8px 32px 0 rgba(158,145,136,0.10)
+- Button: #e5dcd3 bg, #6b5c4a text, border-radius: 14px, font-size: 1.08rem, box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08)
+- Button hover: #ded0c4
+- Entry card: #f7f4ef, border-radius: 18px, box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08)
+- Floating + button: #e5dcd3, #6b5c4a, shadow, 56px
+*/
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f4ef 0%, #efe9e1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 32px 0;
+}
+.title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 2.1rem;
+  color: #6b5c4a;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.newEntryButton {
+  width: 100%;
+  max-width: 390px;
+  margin: 18px auto 30px auto;
+  padding: 16px 0;
+  border-radius: 18px;
+  background: #e5dcd3;
+  color: #6b5c4a;
+  font-size: 1.18rem;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.newEntryButton:active, .newEntryButton:focus, .newEntryButton:hover {
+  background: #ded0c4;
+  color: #6b5c4a;
+}
+.subtitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.1rem;
+  color: #b0a597;
+  margin-bottom: 18px;
+  text-align: left;
+  width: 100%;
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.entryList {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 80px;
+}
+.entryCard {
+  background: #f7f4ef;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08);
+  padding: 22px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.entryCard:active, .entryCard:focus, .entryCard:hover {
+  background: #efe9e1;
+  box-shadow: 0 4px 16px 0 rgba(158,145,136,0.10);
+}
+.entryTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.18rem;
+  color: #6b5c4a;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.entryBodyPreview {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  color: #6b5c4a;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+.entryDate {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.98rem;
+  color: #b0a597;
+  margin-bottom: 0;
+}
+.entryIcons {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+}
+.iconButton {
+  background: none;
+  border: none;
+  color: #b0a597;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 2px;
+}
+.iconButton:active, .iconButton:focus, .iconButton:hover {
+  color: #6b5c4a;
+}
+.fab {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  background: #e5dcd3;
+  color: #6b5c4a;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 4px 16px 0 rgba(158,145,136,0.15);
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.fab:active {
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.10);
+  transform: scale(0.96);
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(239,233,225,0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  background: #f7f4ef;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(158,145,136,0.10);
+  padding: 32px 24px;
+  max-width: 340px;
+  width: 90vw;
+  font-family: 'Lora', Georgia, serif;
+  color: #6b5c4a;
+  font-size: 1.08rem;
+  text-align: left;
+}
+.formField {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.input, .textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #d4cfc7;
+  background: #efe9e1;
+  color: #6b5c4a;
+  font-size: 1.08rem;
+  font-family: 'Lora', Georgia, serif;
+  outline: none;
+  box-shadow: 0 1px 4px 0 rgba(158,145,136,0.04), inset 0 2px 8px 0 rgba(158,145,136,0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.input:focus, .textarea:focus {
+  border: 1.5px solid #b0a597;
+  box-shadow: 0 0 0 3px #efe9e1, 0 1px 4px 0 rgba(158,145,136,0.04), 0 0 8px 0 #b0a59733;
+  background: #f7f4ef;
+}
+.textarea {
+  min-height: 80px;
+  max-height: 200px;
+  resize: vertical;
+}
+.saveButton {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 14px;
+  background: #e5dcd3;
+  color: #6b5c4a;
+  font-size: 1.08rem;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  border: none;
+  margin-bottom: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.saveButton:active, .saveButton:focus, .saveButton:hover {
+  background: #ded0c4;
+  color: #6b5c4a;
+}
+.cancelButton {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 14px;
+  background: #efe9e1;
+  color: #b0a597;
+  font-size: 1.08rem;
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.04);
+  transition: background 0.2s, color 0.2s;
+}
+.cancelButton:active, .cancelButton:focus, .cancelButton:hover {
+  background: #e5dcd3;
+  color: #6b5c4a;
+} 

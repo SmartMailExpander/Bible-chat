@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven Bible App - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: linear-gradient(135deg, #f7f4ef 0%, #e5dcd3 100%);
+            width: 390px;
+            height: 844px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px 0 rgba(158,145,136,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #b0a597 0%, #cfc2b5 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .app-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #6b5c4a;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #b0a597;
+            margin-top: 8px;
+        }
+
+        .content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px 0 rgba(158,145,136,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #6b5c4a;
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #b0a597;
+            line-height: 1.4;
+        }
+
+        .status-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 24px;
+            background: #6b5c4a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .status-left {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .status-right {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(107, 92, 74, 0.1);
+            color: #6b5c4a;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="status-bar">
+        <div class="status-left">
+            <span>9:41</span>
+        </div>
+        <div class="status-right">
+            <span>📶</span>
+            <span>📶</span>
+            <span>🔋</span>
+        </div>
+    </div>
+    
+    
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon">✝</div>
+            <div class="app-title">Haven</div>
+        </div>
+        <div class="subtitle">Your spiritual journey begins here</div>
+    </div>
+
+    <div class="content">
+        
+        <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <div class="feature-title">Read Bible</div>
+            <div class="feature-desc">Explore scripture with multiple translations</div>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <div class="feature-title">Devotionals</div>
+            <div class="feature-desc">Daily spiritual reflections</div>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <div class="feature-title">Journal</div>
+            <div class="feature-desc">Record your spiritual journey</div>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <div class="feature-title">Chat</div>
+            <div class="feature-desc">AI-powered spiritual guidance</div>
+        </div>
+        
+    </div>
+
+    <div class="watermark">
+        Haven Bible App - Mobile Screenshot
+    </div>
+</body>
+</html>

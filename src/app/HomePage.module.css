@@ -1,0 +1,886 @@
+.homeContainer {
+  min-height: 100vh;
+  background: #fdfaf5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 10px 0; /* Added bottom padding to account for bottom nav */
+}
+
+.mainCard {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 0;
+  /* Ensure content doesn't get cut off by bottom nav */
+  padding-bottom: 20px;
+}
+
+.appHeader {
+  padding: 0 16px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appLogo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+}
+
+.appIcon {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0.8) sepia(0.3) hue-rotate(10deg);
+  padding-top: 15px;
+  flex-shrink: 0;
+}
+
+.appTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-height: 60px;
+}
+
+.appName {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: #3c2f2f;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  max-width: 380px;
+  margin: 0;
+}
+
+.appSubtitle {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #a98f80;
+  letter-spacing: 0.2px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.greetingCard {
+  background: #fffdf6;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #3c2f2f;
+  margin-top: 16px;
+  position: relative;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+}
+.greetingTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  letter-spacing: 0.5px;
+  color: #3c2f2f;
+}
+.greetingDesc {
+  font-size: 0.95rem;
+  color: #a09689;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* Loading state styles */
+.banner {
+  background: #fffdf6;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text {
+  flex: 1;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3c2f2f;
+  margin: 0;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3c2f2f;
+  margin: 0 0 16px 0;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+.greetingIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #fef6c6;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #d4a574;
+}
+
+.verseCard {
+  background: #fffdf6;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+.verseTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a98f80;
+  margin-bottom: 8px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.verseText {
+  font-size: 1rem;
+  color: #3c2f2f;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  margin-bottom: 8px;
+}
+.verseRef {
+  font-size: 0.85rem;
+  color: #a98f80;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.verseBookmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fef6c6;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #d4a574;
+}
+
+.progressCard {
+  background: #fffdf6;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+}
+.progressLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a98f80;
+  margin-bottom: 8px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.progressDay {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3c2f2f;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+.progressBarBg {
+  background: #f0ede8;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.progressBar {
+  background: linear-gradient(90deg, #d4a574, #b8946a);
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+.quickAccess {
+  margin-top: 24px;
+}
+.quickAccessLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3c2f2f;
+  margin-bottom: 16px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+.quickAccessRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+.quickAccessIcon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.quickAccessIconBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f5efe7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px auto;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.quickAccessIconBox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.quickAccessIconLabel {
+  font-size: 0.9rem;
+  color: #513c2c;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.recentActivity {
+  margin-top: 24px;
+}
+.recentActivityLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3c2f2f;
+  margin-bottom: 16px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+.recentActivityCard {
+  background: #fffdf6;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 12px;
+}
+.recentActivityText {
+  font-size: 0.95rem;
+  color: #3c2f2f;
+  margin-bottom: 8px;
+  font-family: 'Georgia', serif;
+}
+.recentActivityTime {
+  font-size: 0.8rem;
+  color: #a98f80;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.recentActivityShare {
+  margin-top: 8px;
+}
+
+.fab {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #d4a574, #b8946a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(212, 165, 116, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+.fab:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(212, 165, 116, 0.3);
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fffdf6;
+  border-top: 1px solid #ded0c4;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+.bottomNavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  min-width: 60px;
+}
+.bottomNavIcon {
+  font-size: 20px;
+  color: #b0a597;
+  transition: color 0.2s ease;
+}
+.bottomNavIconActive {
+  color: #a98f80;
+}
+.bottomNavLabel {
+  font-size: 11px;
+  color: #b0a597;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.bottomNavLabelActive {
+  color: #a98f80;
+  font-weight: 600;
+}
+
+.spiritualJourneySection {
+  margin-top: 24px;
+  width: 100%;
+}
+.spiritualJourneyLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3c2f2f;
+  margin-bottom: 16px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  padding: 0 16px;
+}
+.spiritualJourneyTimeline {
+  display: flex;
+  gap: 16px;
+  padding: 4px 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.spiritualJourneyTimeline::-webkit-scrollbar {
+  display: none;
+}
+.spiritualJourneyMilestone {
+  background: #fffdf6;
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 180px;
+  max-width: 180px;
+  min-height: 140px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.spiritualJourneyMilestone:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.spiritualJourneyMilestoneIcon {
+  background: #fef6c6;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #d4a574;
+  margin-bottom: 12px;
+}
+.spiritualJourneyMilestoneContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.spiritualJourneyMilestoneTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3c2f2f;
+  margin-bottom: 4px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+.spiritualJourneyMilestoneSub {
+  font-size: 14px;
+  color: #a98f80;
+  margin-bottom: 12px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.spiritualJourneyMilestoneBtn {
+  background: linear-gradient(135deg, #d4a574, #b8946a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.spiritualJourneyMilestoneBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Upgrade Section */
+.upgradeSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.upgradeContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.upgradeIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
+.upgradeText {
+  flex: 1;
+}
+
+.upgradeText h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.upgradeText p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.upgradeButton {
+  background: white;
+  color: #667eea;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.upgradeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+  background: #f8f9fa;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive design for upgrade section */
+@media (max-width: 768px) {
+  .upgradeContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .upgradeIcon {
+    font-size: 1.5rem;
+  }
+  
+  .upgradeText h3 {
+    font-size: 1.1rem;
+  }
+  
+  .upgradeText p {
+    font-size: 0.85rem;
+  }
+  
+  .upgradeButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 480px) {
+  .homeContainer {
+    padding: 0 0 80px 0; /* Increased bottom padding for mobile */
+  }
+  
+  .mainCard {
+    max-width: 100%;
+    padding: 0 8px 20px 8px; /* Add horizontal padding */
+  }
+  
+  .appHeader {
+    padding: 0 12px 0 12px;
+  }
+  
+  .appIcon {
+    width: 50px;
+    height: 50px;
+    padding-top: 12px;
+  }
+  
+  .appName {
+    font-size: 24px;
+    max-width: 280px;
+  }
+  
+  .appSubtitle {
+    font-size: 11px;
+  }
+  
+  .greetingCard {
+    padding: 0.875rem;
+    margin-top: 12px;
+  }
+  
+  .greetingTitle {
+    font-size: 1.5rem;
+  }
+  
+  .greetingDesc {
+    font-size: 0.9rem;
+  }
+  
+  .greetingIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .verseCard {
+    padding: 0.875rem;
+    margin-top: 12px;
+  }
+  
+  .progressCard {
+    padding: 0.875rem;
+    margin-top: 12px;
+  }
+  
+  .quickAccessLabel {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .quickAccessRow {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .quickAccessIconBox {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .quickAccessIconLabel {
+    font-size: 0.85rem;
+  }
+  
+  .recentActivityLabel {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .recentActivityCard {
+    padding: 0.875rem;
+    margin-bottom: 8px;
+  }
+  
+  .fab {
+    bottom: 90px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+  
+  .bottomNav {
+    padding: 6px 0;
+  }
+  
+  .bottomNavItem {
+    padding: 6px;
+    min-width: 56px;
+  }
+  
+  .bottomNavIcon {
+    font-size: 18px;
+  }
+  
+  .bottomNavLabel {
+    font-size: 10px;
+  }
+  
+  .spiritualJourneyLabel {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding: 0 12px;
+  }
+  
+  .spiritualJourneyTimeline {
+    gap: 12px;
+    padding: 4px 12px;
+  }
+  
+  .spiritualJourneyMilestone {
+    min-width: 160px;
+    max-width: 160px;
+    min-height: 130px;
+    padding: 0.875rem;
+  }
+  
+  .spiritualJourneyMilestoneTitle {
+    font-size: 15px;
+  }
+  
+  .spiritualJourneyMilestoneSub {
+    font-size: 13px;
+  }
+  
+  .spiritualJourneyMilestoneBtn {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+}
+
+/* Small mobile devices (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  .mainCard {
+    padding: 0 4px 20px 4px;
+  }
+  
+  .appHeader {
+    padding: 0 8px 0 8px;
+  }
+  
+  .appIcon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .appName {
+    font-size: 22px;
+    max-width: 240px;
+  }
+  
+  .greetingCard,
+  .verseCard,
+  .progressCard,
+  .recentActivityCard {
+    padding: 0.75rem;
+  }
+  
+  .greetingTitle {
+    font-size: 1.4rem;
+  }
+  
+  .quickAccessIconBox {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .spiritualJourneyMilestone {
+    min-width: 140px;
+    max-width: 140px;
+    min-height: 120px;
+    padding: 0.75rem;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .mainCard {
+    max-width: 480px;
+    padding: 0 16px 20px 16px;
+  }
+  
+  .appName {
+    font-size: 26px;
+  }
+  
+  .greetingTitle {
+    font-size: 1.6rem;
+  }
+  
+  .quickAccessIconBox {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .spiritualJourneyTimeline {
+    gap: 14px;
+  }
+  
+  .spiritualJourneyMilestone {
+    min-width: 170px;
+    max-width: 170px;
+  }
+}
+
+/* Large tablet and desktop */
+@media (min-width: 769px) {
+  .mainCard {
+    max-width: 600px;
+    padding: 0 24px 20px 24px;
+  }
+  
+  .appName {
+    font-size: 32px;
+  }
+  
+  .greetingTitle {
+    font-size: 2rem;
+  }
+  
+  .quickAccessIconBox {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .spiritualJourneyTimeline {
+    gap: 18px;
+  }
+  
+  .spiritualJourneyMilestone {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 150px;
+  }
+  
+  .spiritualJourneyMilestoneTitle {
+    font-size: 17px;
+  }
+  
+  .spiritualJourneyMilestoneSub {
+    font-size: 15px;
+  }
+  
+  .spiritualJourneyMilestoneBtn {
+    font-size: 15px;
+    padding: 9px 14px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .quickAccessIconBox,
+  .spiritualJourneyMilestone,
+  .fab,
+  .bottomNavItem {
+    min-height: 44px; /* iOS minimum touch target */
+  }
+  
+  .quickAccessIconBox {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .spiritualJourneyMilestone {
+    min-height: 140px;
+  }
+  
+  .fab {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .bottomNavItem {
+    min-height: 44px;
+  }
+}
+
+.devotionalReflectionCard {
+  background: #fff9f3;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(158,145,136,0.08);
+  padding: 22px 18px 18px 18px;
+  margin: 18px 0 18px 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #6b5c4a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.reflectionTitle {
+  font-size: 17px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: bold;
+  color: #6b5c4a;
+  margin-bottom: 6px;
+}
+.reflectionText {
+  font-size: 15px;
+  color: #a68a64;
+  font-family: 'Georgia', serif;
+  margin-bottom: 8px;
+}
+.reflectionPrompt {
+  font-size: 15px;
+  color: #6b5c4a;
+  font-family: 'Lora', Georgia, serif;
+  margin-bottom: 0;
+  background: #fae3c7;
+  border-radius: 10px;
+  padding: 7px 14px;
+  margin-top: 2px;
+  align-self: flex-start;
+} 
